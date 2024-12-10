@@ -1,0 +1,138 @@
+
+/* Estilo global */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(/img/photo-1423145369430-a9ea0de096cd.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+  /* Tarjeta */
+.card {
+    background-image: url('/img/christmas-red-background-lined-snowflakes-simple-holiday-card-vector.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80%;
+    border-radius: 20px;
+    text-align: center;
+    padding: 30px 20px;
+    width: 500px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    animation: aparecer 1s ease-out;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 20%;
+    margin-bottom: 3px;
+    color: #000000;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    animation: deslizar-abajo 1s ease-in-out;
+}
+
+p {
+    font-size: 2rem;
+    padding-top: 20%;
+    margin-bottom: 10px;
+    color: #272521;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation: aparecer 2s ease-in-out;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    animation: aparecer 2.5s ease-in-out;
+}
+
+button:hover {
+    background-color: #388e3c;
+}
+
+  /* Luces navideñas */
+.lights {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: -20px;
+    width: 100%;
+    animation: parpadeo 1.5s infinite alternate;
+}
+
+.light {
+    width: 10px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.5);
+    animation: brillo 1.5s infinite alternate;
+}
+
+.light.red { background: red; }
+.light.yellow { background: yellow; }
+.light.green { background: green; }
+.light.blue { background: blue; }
+
+  /* Animación de brillo */
+@keyframes brillo {
+    0% {
+    opacity: 0.4;
+    transform: scale(1);
+    box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.3);
+    }
+    100% {
+    opacity: 1;
+    transform: scale(1.2);
+    box-shadow: 0 0 25px 8px rgba(255, 255, 255, 0.8);
+    }
+}
+  /* Animaciones */
+@keyframes aparecer {
+    from {
+    opacity: 0;
+    transform: scale(0.8);
+    }
+    to {
+    opacity: 1;
+    transform: scale(1);
+    }
+}
+
+@keyframes deslizar-abajo {
+    from {
+    transform: translateY(-20px);
+    opacity: 0;
+    }
+    to {
+    transform: translateY(0);
+    opacity: 1;
+    }
+}
+
+@keyframes parpadeo {
+    0%, 100% {
+    opacity: 0.5;
+    }
+    50% {
+    opacity: 1;
+    }
+}
+
+
+
